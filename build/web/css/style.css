@@ -1,0 +1,449 @@
+/* ======================================================
+   COLOR SCHEME & TOKENS
+====================================================== */
+:root {
+    --primary: #1f4fd8;      /* calm blue */
+    --primary-dark: #163ca8;
+    --accent: #f59e0b;       /* warm accent */
+
+    --bg-main: #f5f7fb;
+    --bg-white: #ffffff;
+    --bg-dark: #020617;
+
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --text-light: #e5e7eb;
+
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+
+    --shadow-sm: 0 4px 12px rgba(0,0,0,0.08);
+    --shadow-md: 0 10px 30px rgba(0,0,0,0.12);
+
+    --transition: 0.3s ease;
+}
+
+/* ======================================================
+   RESET
+====================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, "Segoe UI", sans-serif;
+}
+
+body {
+    background: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ======================================================
+   LAYOUT
+====================================================== */
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section.gray {
+    background: var(--bg-white);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+/* ======================================================
+   HEADER
+====================================================== */
+.header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header-flex {
+    padding: 18px 0;
+}
+
+.brand-wrap {
+    float: left;
+}
+
+.brand-logo {
+    font-size: 20px;
+    color: var(--primary);
+    margin-right: 6px;
+}
+
+.brand {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.main-nav {
+    float: right;
+}
+
+.main-nav a {
+    margin-left: 22px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.admin-btn {
+    background: var(--primary);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+.header::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ======================================================
+   HERO
+====================================================== */
+.hero {
+    background: #eef2ff;
+    padding: 100px 0;
+}
+
+.hero-grid {
+    overflow: hidden;
+}
+
+.hero-text {
+    float: left;
+    width: 50%;
+    padding-right: 40px;
+}
+
+.hero-badge {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.hero-text h1 span {
+    color: var(--primary);
+}
+
+.hero-text p {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.hero-actions button,
+.hero-actions a {
+    display: inline-block;
+    margin-right: 14px;
+}
+
+.orange-btn {
+    background: var(--primary);
+    color: #fff;
+    padding: 12px 26px;
+    border-radius: 30px;
+    border: none;
+}
+
+.outline-btn {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 10px 24px;
+    border-radius: 30px;
+}
+
+.hero-media {
+    float: right;
+    width: 50%;
+}
+
+.hero-media img {
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+/* ======================================================
+   APPROACH
+====================================================== */
+.approach {
+    background: #ffffff;
+}
+
+.approach-grid {
+    
+    text-align: center;   /* KEY: centers inline-block items */
+    font-size: 0;         /* removes inline-block spacing issues */
+}
+
+.approach-item {
+    display: inline-block;
+    width: 30%;
+    margin: 0 1.5%;
+    vertical-align: top;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    
+    
+    font-size: 14px;      /* restore text size */
+    text-align: center;   /* center content inside */
+}
+
+.approach-icon {
+    font-size: 36px;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+/* ======================================================
+   SERVICES
+====================================================== */
+.service-grid {
+    text-align: center;
+}
+
+.service-card {
+    display: inline-block;
+    width: 30%;
+    margin: 0 1.5% 30px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.service-icon {
+    font-size: 36px;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+/* ======================================================
+   ABOUT SECTION (FIXED FOR YOUR JSP)
+====================================================== */
+
+.about-grid {
+    overflow: hidden;   /* clear floats */
+ 
+}
+
+/* IMAGE COLUMN */
+.about-media {
+    float: left;
+    width: 45%;
+    text-align: center;
+}
+
+.about-media img {
+    width: 90%;
+    max-width: 420px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* TEXT COLUMN */
+.about-text {
+    float: right;
+    width: 55%;
+    padding-top: 30px;
+    text-align: center;   /* YOU ASKED FOR CENTER */
+}
+
+.about-text h2 {
+    font-size: 34px;
+    margin-bottom: 18px;
+}
+
+.about-text p {
+    max-width: 520px;
+    margin: 0 auto 24px;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+/* BULLET POINTS */
+.about-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-points li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+/* ======================================================
+   PROJECTS & CLIENTS
+====================================================== */
+.card-grid {
+    text-align: center;
+}
+
+.project-card,
+.client-card {
+    display: inline-block;
+    width: 30%;
+    margin: 0 1.5% 30px;
+    background: #ffffff;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    vertical-align: top;
+}
+
+.project-card img {
+    height: 180px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 20px;
+}
+
+.client-card {
+    padding: 25px;
+}
+
+.quote-icon {
+    font-size: 32px;
+    color: var(--primary);
+}
+
+/* ======================================================
+   CTA
+====================================================== */
+.cta-modern {
+    background: var(--primary);
+    color: #ffffff;
+    padding: 90px 0;
+}
+
+.cta-grid {
+    overflow: hidden;
+}
+
+.cta-text {
+    float: left;
+    width: 50%;
+}
+
+.cta-form-modern {
+    float: right;
+    width: 40%;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: var(--radius-md);
+}
+
+.cta-form-modern input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+}
+
+.cta-form-modern button {
+    width: 100%;
+    background: var(--accent);
+    border: none;
+    padding: 12px;
+    color: #fff;
+}
+
+/* ======================================================
+   FOOTER
+====================================================== */
+.footer-modern {
+    background: var(--bg-dark);
+    color: var(--text-light);
+    padding: 60px 0 20px;
+}
+
+.footer-grid {
+    overflow: hidden;
+}
+
+.footer-brand,
+.footer-links,
+.footer-newsletter {
+    float: left;
+    width: 30%;
+    margin-right: 3%;
+}
+
+.footer-links a {
+    display: block;
+    margin-bottom: 6px;
+    color: #94a3b8;
+}
+
+.footer-bottom {
+    clear: both;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* ======================================================
+   RESPONSIVE (SAFE)
+====================================================== */
+@media (max-width: 900px) {
+    .hero-text,
+    .hero-media,
+    .about-media,
+    .about-text,
+    .cta-text,
+    .cta-form-modern {
+        float: none;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .service-card,
+    .approach-item,
+    .project-card,
+    .client-card {
+        width: 90%;
+        margin: 0 auto 20px;
+    }
+
+    .main-nav {
+        display: none;
+    }
+}
